@@ -10,7 +10,6 @@ def solution(clothes):
             clothes_info[y] += 1
 
     answer = 0
-    
     for value in clothes_info.values():
         answer *= (value + 1)
         

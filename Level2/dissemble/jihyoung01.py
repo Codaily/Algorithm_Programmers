@@ -13,6 +13,7 @@ def solution(clothes):
         for j in range (len(clothes)):
             if clothes_sort[i] == clothes[j][1]:
                 clothes_cnt[i] += 1
+                
     answer = 1
     for k in range(len(clothes_cnt)):
          answer *= (clothes_cnt[k] + 1)
