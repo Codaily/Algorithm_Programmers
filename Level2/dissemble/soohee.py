@@ -8,7 +8,7 @@ def solution(clothes):
             dic[j]+=1
     
     answer = 1
-    if dic.values()==3 :
+    if dic.values()== len(clothes) :
         answer = len(clothes)
     else:
         for i in dic.values():
