@@ -1,21 +1,16 @@
 def solution(name):
 
     answer = 0
-    mov = [min(ord(i)-ord('A'), ord('Z')-ord(i)+1) for i in name]
-    answer += sum(mov)
+    change1 = [min(ord(i)-ord('A'), ord('Z')-ord(i)+1) for i in name]
+    answer += sum(change1) # 알파벳 바꾸는 거 
+    print(change1)
+    # ------------------- 이동 하기 ------------------
 
-    for i in range(len(name)):
-        if name[i]=='A':
-            answer -=1
-        
-    if any(mov):
-        answer += len(name) -1
-    elif all(mov)==0:
-        answer = 0 
-
-   
-    print(answer)
+    cut = change1.index(0)
+    change2 = change1[cut:] + change1[:cut]
+ 
+    print(change2)
     return answer
 
 
-solution("AAA")
+solution("BBBAAAB")
