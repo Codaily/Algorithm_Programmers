@@ -9,17 +9,13 @@ def solution(citations):
             else:
                 Lcnt +=1 
         
-
         if Hcnt >= H_index:
             answer = H_index
             break
-        elif H_index == 0:
-            answer = 0
-            break
         else:
-            H_index -=1
+            H_index -=1 
 
     print(answer)
     return answer
 
-solution([2,2,2,2,2])
+solution([2,2,2,2,2]) 
