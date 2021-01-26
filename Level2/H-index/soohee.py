@@ -13,9 +13,9 @@ def solution(citations):
             answer = H_index
             break
         else:
-            H_index -=1
+            H_index -=1 
 
     print(answer)
     return answer
 
-solution([2,2,2,2,2])
+solution([2,2,2,2,2]) 
