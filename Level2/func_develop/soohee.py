@@ -4,7 +4,7 @@ def solution(progresses, speeds):
    
     num = clear[0]
     answer = []
-    while(True):
+    while(len(clear)>0):
         cnt = 0
         for i in range(len(clear)):
             if num >= clear[i]:
@@ -12,14 +12,12 @@ def solution(progresses, speeds):
                 if len(clear)==i+1:
                      answer.append(cnt)
                      del clear[:i+1]
+                
             else:
                 answer.append(cnt)
                 num = clear[i]
                 del clear[:i]
                 break
-               
-        if len(clear)==0:
-            break
 
     print(answer)
     return answer
