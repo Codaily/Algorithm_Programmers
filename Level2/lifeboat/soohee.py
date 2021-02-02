@@ -13,5 +13,5 @@ def solution(people, limit):
             max -=1  
     return cnt
 
-solution([30,40,50,60,70,80],100)
-# answer = 4
+solution([30,40,50,60,70,230],100)
+# cnt = 4
