@@ -1,4 +1,4 @@
-# 
+# 실패 : test case [20, 50, 50, 80]
 # def solution_(people, limit):
 #     answer = 0
     
