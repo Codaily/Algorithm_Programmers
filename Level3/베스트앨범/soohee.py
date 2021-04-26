@@ -2,7 +2,6 @@ def solution(genres, plays):
     BestAlbum = []
     dict = {}
     PlaysNum = sorted([[i,j] for i, j in enumerate(plays)],key = lambda x : x[1] , reverse =True)
-    print(PlaysNum)
     for g, p in zip(genres, plays):
         if g not in dict:
             dict[g] = [p]
