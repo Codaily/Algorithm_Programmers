@@ -18,4 +18,4 @@ def solution(land):
 
     return max(land[-1])
 
-print(solution([[4, 3, 2, 1], [2, 2, 2, 1], [6, 3, 5, 4], [8, 7, 6, 5]]))
+print(solution([[4, 3, 2, 1], [2, 2, 2, 1], [6, 6, 6, 4], [8, 7, 6, 5]]))
