@@ -7,6 +7,7 @@ def solution(orders, course):
 
     for ord in orders: # menu 조합 만들기
         for co in course:
+            ord = sorted(ord)
             menu = list(combinations(ord,co))
             for m in menu:
                 menuSet.add("".join(m))
@@ -15,8 +16,8 @@ def solution(orders, course):
     for m in menuSet: # 주문된 메뉴 세트 확인
         for ord in orders:
             cnt = 0
-            for i in m:
-                if i in ord:
+            for i in range(len(m)):
+                if m[i] in ord:   
                     cnt+= 1
             if cnt == len(m):
                 if m not in dict:
@@ -24,7 +25,7 @@ def solution(orders, course):
                 else: dict[m] += 1
     
     dict = sorted(dict.items(), key= lambda x: x[1] , reverse=True)
-    for co in course:
+    for co in course: # [2,3,4]
         maxCount = 0
         for d in dict:
             if len(d[0]) == co and maxCount <= d[1] :  
@@ -36,5 +37,5 @@ def solution(orders, course):
 
     return sorted(answer)
 
-print(solution(["ABCDE", "AB", "CD", "ADE", "XYZ", "XYZ", "ACD"],[2,3,5]))
-#print(solution(["XYZ", "XWY", "WXA"],[2,3,4]))
+#print(solution(["ABCDE", "AB", "CD", "ADE", "XYZ", "XYZ", "ACD"],[2,3,5]))
+print(solution(["XYZ", "XWY", "WXA"],[2,3,4]))
