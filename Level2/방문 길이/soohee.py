@@ -13,6 +13,7 @@
 
 #     return cnt
 
+
 def solution(dirs):
     Way = {"U":[0,1], "D":[0,-1], "R":[1,0], "L": [-1,0]}
     Loc = (0,0)
