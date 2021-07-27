@@ -15,7 +15,7 @@ def solution(numbers):
         # 다시 2진수를 10진수로 변환
         minNum = int("".join(binNum), 2)
         answer.append(minNum)
-        
+
 
     return answer
 
