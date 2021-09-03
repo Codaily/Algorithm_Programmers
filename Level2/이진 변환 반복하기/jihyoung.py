@@ -14,7 +14,3 @@ def solution(s):
         s = format((len(s)), 'b') #bin(len(s))[2:]
 
         count += 1
-
-
-s = "01110"
-print(solution(s))
